@@ -1,1 +1,98 @@
- 
+@import url("https://fonts.google.com/specimen/Spartan");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: Spartan; }
+  body p {
+    line-height: 1.5; }
+
+.container {
+  padding: 0 20px;
+  text-align: center; }
+  .container > h1 {
+    line-height: .8;
+    width: 90%;
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #502050; }
+  .container > p {
+    color: #937b92;
+    font-size: 1.3em; }
+  .container .rates {
+    margin-top: 30px; }
+    .container .rates .rate {
+      border-radius: 8px;
+      background-color: #f7f2f7;
+      margin-top: 10px;
+      margin-bottom: 16px; }
+      .container .rates .rate .stars {
+        padding-top: 15px; }
+        .container .rates .rate .stars img {
+          width: 17px;
+          height: 17px; }
+      .container .rates .rate P {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #502050;
+        margin: 0;
+        padding-top: 3px;
+        padding-bottom: 12px; }
+
+.cards-container {
+  margin-top: 45px; }
+  .cards-container .card {
+    background-color: #502050;
+    border-radius: 8px;
+    padding: 35px;
+    margin-bottom: 20px; }
+    .cards-container .card .card-top {
+      display: flex;
+      align-items: center; }
+      .cards-container .card .card-top img {
+        display: inline-block;
+        margin-right: 20px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 1px;
+        background-color: rgba(255, 255, 255, 0.219); }
+      .cards-container .card .card-top .card-top-des h2 {
+        font-weight: 700;
+        font-size: 1em;
+        color: #f7f2f7;
+        margin-bottom: 0; }
+      .cards-container .card .card-top .card-top-des h3 {
+        font-weight: 400;
+        font-size: 1em;
+        color: #ee68a4;
+        margin-top: 3px; }
+    .cards-container .card q {
+      margin-top: 18px;
+      line-height: 1.6;
+      display: inline-block;
+      text-align: left;
+      font-size: 1.1em;
+      color: white; }
+
+footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #502050;
+  font-size: .9em;
+  color: white; }
+  footer a {
+    color: #ee68a4;
+    text-decoration: none;
+    font-size: .9em; }
+  footer div {
+    margin: 10px; }
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+    margin: auto; } }

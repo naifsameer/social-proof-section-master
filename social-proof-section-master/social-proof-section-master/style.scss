@@ -1,0 +1,143 @@
+@import url('https://fonts.google.com/specimen/Spartan');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: Spartan;
+  
+  p {
+    line-height: 1.5;
+  }
+}
+
+.container {
+  padding: 0 20px;
+  text-align: center;
+  
+  & > h1 {
+    line-height: .8;
+    width: 90%;
+    font-size: 2.8em;
+    font-weight: 700;
+    color: rgb(80, 32, 80);
+  }
+  
+  & > p {
+    color: hsl(303, 10%, 53%);
+    font-size: 1.3em;
+  }
+
+  .rates {
+    margin-top: 30px;
+
+    .rate {
+      border-radius: 8px;
+      background-color: rgb(247, 242, 247);
+      margin-top: 10px;
+      margin-bottom: 16px;
+
+      //the icons
+      .stars {
+        padding-top: 15px;
+        $img-size: 17px;
+        img {
+          width: $img-size;
+          height: $img-size;
+        }
+      }
+
+      P {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: hsl(300, 43%, 22%);
+        margin: 0;
+        padding-top: 3px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
+
+.cards-container {
+  margin-top: 45px;
+  
+  .card {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 8px;
+    padding: 35px;
+    margin-bottom: 20px;
+
+    .card-top {
+      display: flex;
+      align-items: center;
+
+      img {
+        $img-size: 40px;
+        
+        display: inline-block;
+        margin-right: 20px;
+        border-radius: 50%;
+        width: $img-size;
+        height: $img-size;
+        padding: 1px;
+        background-color: rgba(255, 255, 255, 0.219);
+      }
+
+      .card-top-des {
+        h2 {
+          font-weight: 700;
+          font-size: 1em;
+          color: hsl(300, 24%, 96%);
+          margin-bottom: 0;
+        }
+  
+        h3 {
+          font-weight: 400;
+          font-size: 1em;
+          color: hsl(333, 80%, 67%);
+          margin-top: 3px;
+        }
+      }
+    }
+
+    q {
+      margin-top: 18px;
+      line-height: 1.6;
+      display: inline-block;
+      text-align: left;
+      font-size: 1.1em;
+      color:   hsl(0, 0%, 100%);
+    }
+  }
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: hsl(300, 43%, 22%);
+  font-size: .9em;
+  color: hsl(0, 0%, 100%);
+
+  a {
+    color: hsl(333, 80%, 67%);
+    text-decoration: none;
+    font-size: .9em;
+  }
+
+  div {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+    margin: auto;
+  }
+}
