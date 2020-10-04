@@ -7,8 +7,8 @@
 body {
   margin: 0;
   font-size: 15px;
-  font-family: Spartan;
-  
+  font-family: Spartan ,Verdana, Geneva, Tahoma, sans-serif;
+
   p {
     line-height: 1.5;
   }
@@ -18,7 +18,7 @@ body {
   padding: 0 20px;
   text-align: center;
   
-  & > h1 {
+  .head h1 {
     line-height: .8;
     width: 90%;
     font-size: 2.8em;
@@ -26,7 +26,7 @@ body {
     color: rgb(80, 32, 80);
   }
   
-  & > p {
+  .head p {
     color: hsl(303, 10%, 53%);
     font-size: 1.3em;
   }
@@ -135,9 +135,155 @@ footer {
   }
 }
 
+// Mobile L
 @media (min-width: 375px) {
   .container {
-    max-width: 375px;
+    max-width: 500px;
     margin: auto;
   }
+}
+
+//  Tablet
+@media (min-width: 768px) {
+  .container {
+    $tablet-width: 640px;
+    %margin-center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    max-width: 90%;
+
+    .head h1 {
+      @extend %margin-center;
+
+      max-width: $tablet-width;
+      line-height: 1.2;
+      
+    }
+
+    .head p {
+      @extend %margin-center;
+
+      max-width: $tablet-width;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .container{
+    %flex-style {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    .rates {
+      @extend %flex-style;
+
+      .rate {
+        $padding-rate: 13px;
+        flex-basis: 45%;
+        // padding-top: $padding-rate;
+        // padding-bottom: $padding-rate;
+      }
+
+      .rate:last-of-type {
+        flex-basis: 93%;
+      }
+    }
+
+    .cards-container {
+      @extend %flex-style;
+
+      .card {
+        flex-basis: 45%;
+      }
+
+      .card:last-of-type {
+        flex-basis: 93%;
+      }
+    }
+  }
+}
+
+//  laptop
+@media (min-width: 1300px) {
+  %flex-laptop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  body {
+    padding-top: 100px;
+  }
+  .container {
+    @extend %flex-laptop;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 1300px;
+
+    .head {
+      flex-basis: 40%;
+
+      h1 {
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    .rates {
+      flex-basis: 55%;
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      .rate {
+        @extend %flex-laptop;
+        align-items: center;
+        justify-content: left;
+        width: 85%;
+
+        padding: 20px;
+
+        .stars {
+          padding-top: 0;
+          margin-right: 20px;
+        }
+
+        p {
+          padding: 0;
+        }
+      }
+
+      .rate:nth-of-type(2) {
+        transform: translateX(70px)
+      }
+
+      .rate:nth-of-type(3) {
+        transform: translateX(140px)
+      }
+    }
+
+    .cards-container {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .card {
+        flex-basis: 40% !important;
+      }
+
+      $translateY: 20px;
+      .card:nth-of-type(2) {
+        transform: translate( $translateY , 30px);
+      }
+
+      .card:nth-of-type(3) {
+        transform: translate( ($translateY * 2), 60px);
+      }
+    }
+  }
+
 }
